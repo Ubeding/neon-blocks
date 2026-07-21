@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141516">
+  <meta name="description" content="Neon Blocks: juego de bloques gratuito para navegador.">
+  <title>Neon Blocks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <div class="brand-mark">NB</div>
+      <div><p class="eyebrow">ARCADE / 001</p><h1>NEON BLOCKS</h1></div>
+      <button id="pauseTop" class="sound" aria-label="Pausar juego">Ⅱ</button>
+    </header>
+    <section class="arena">
+      <aside class="stats left-stats">
+        <div><p class="label">PUNTUACIÓN</p><strong id="score">0</strong></div>
+        <div><p class="label">LÍNEAS</p><strong id="lines">00</strong></div>
+        <div><p class="label">NIVEL</p><strong id="level">01</strong></div>
+      </aside>
+      <div class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Tablero de Neon Blocks"></div>
+        <div id="overlay" class="overlay">
+          <p id="overlayLabel">ORDENA. ENCAJA. SUPERA.</p>
+          <h2 id="overlayTitle">¿LISTO?</h2>
+          <button id="startButton">INICIAR PARTIDA</button>
+          <small>FLECHAS PARA MOVER · ↑ GIRAR · ESPACIO CAER</small>
+        </div>
+      </div>
+      <aside class="stats right-stats">
+        <div><p class="label">SIGUIENTE</p><div id="next" class="mini"></div></div>
+        <div><p class="label">RÉCORD</p><strong id="best">0</strong></div>
+        <div class="keys"><p class="label">CONTROLES</p><p><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> Mover</p><p><kbd>↑</kbd> Girar</p><p><kbd>␣</kbd> Caída rápida</p><p><kbd>P</kbd> Pausa</p></div>
+      </aside>
+    </section>
+    <nav class="mobile-controls" aria-label="Controles táctiles">
+      <button data-action="left" aria-label="Mover a la izquierda">←</button>
+      <button data-action="down" aria-label="Bajar">↓</button>
+      <button data-action="right" aria-label="Mover a la derecha">→</button>
+      <button data-action="rotate" aria-label="Girar">↻</button>
+      <button data-action="drop" aria-label="Caída rápida">⇣</button>
+    </nav>
+    <footer><span>VERSIÓN 1.0</span><span>GRATIS · SIN ANUNCIOS</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
